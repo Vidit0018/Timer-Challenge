@@ -9,7 +9,7 @@ import { forwardRef ,useImperativeHandle, useRef } from "react"
   else{
     userLost=false;
   }
-  const score =Math.round((1-(remainingTime/1000))*100);
+  const score =Math.round((targetTime-(remainingTime/1000))*100);
 
   useImperativeHandle(ref,()=>{
     return {
